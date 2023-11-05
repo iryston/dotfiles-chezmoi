@@ -1,0 +1,17 @@
+# vim:ft=gitconfig
+# git/config.local
+
+[user]
+	name = User Name
+	email = username@example.com
+	signingkey = 1111111111111111
+
+[github]
+	user = username
+	; token =
+
+[credential]
+	helper = cache --timeout=3600
+
+[gpg]
+	program = gpg

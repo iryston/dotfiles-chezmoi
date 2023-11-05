@@ -1,0 +1,97 @@
+# Git Aliases
+# @see <https://github.com/GitAlias/gitalias>
+
+[alias]
+
+	# git add
+	aa = add --all
+	au = add --update
+	ai = add --interactive
+
+	# git branch
+	branches = branch -a
+
+	# git checkout
+	cho = checkout
+
+	# git config
+	aliases = "!git config --get-regexp '^alias\\.' | colrm 1 6 | sed 's/ / = /'"
+
+	# git commit
+	ca = commit --amend
+	ci = commit --interactive
+	cm = commit --message
+	cmt = commit -am
+
+	# git diff[tool]
+	dc = diff --cached
+	ds = diff --staged
+	df = !"git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX"
+	dt = !"for name in $(git diff --name-only $1); do git difftool $1 $name & done"
+	# List of files with merge conflicts
+	dn = diff --name-only --diff-filter=U
+
+	# git grep
+	gg = grep --break --heading --line-number
+
+	# git log
+	# %G? format: show "G" for a good (valid) signature, "B" for a bad signature, "U" for a good signature with unknown validity, "X" for a good signature that has expired, "Y" for a good signature made by an expired key, "R" for a good signature made by a revoked key, "E" if the signature cannot be checked (e.g. missing key) and "N" for no signature
+	hist = log --graph --date=relative --pretty=format:\"%C(yellow)%h %C(blue)%m%C(auto)%d %C(reset)%s %C(blue)(%C(reset)%C(brightred)%G? %C(reset)%C(magenta)%ad %C(reset)%C(cyan)by %an)%C(reset)\"
+	lg = log --graph
+	# Git log find in commits
+	lfc = log --pretty=format:\"%C(yellow)%H %C(cyan)%s\" --name-status --grep
+	lk = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=nice
+	ll = log -n 15 --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=nice
+	lm = !git log --author $(git config user.email)
+	lo = log --oneline
+	lp = log --patch
+	search = !"f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
+	contributors = shortlog --summary --numbered --no-merges
+
+	# git push
+	publish = !"git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+	unpublish = !"git push origin :$(git rev-parse --abbrev-ref HEAD)"
+
+	# git remote
+	remotes = remote -v
+
+	# git reset
+	undo = reset --soft HEAD~1
+	# Cancel local commits in the branch
+	rhard = "!f() { git reset --hard origin/$1; }; f"
+
+	# git stash
+	save = stash save
+	pop = stash pop
+	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+
+	# git status
+	ss = status --short
+	st = status -sb
+
+	# git submodule
+	sm = submodule
+
+	# git tag
+	tags = tag -n1 --list
+
+	# misc
+	ctags = !"$(git rev-parse --git-dir)/hooks/ctags"
+	gitignore = "!f() { curl -L -s https://www.gitignore.io/api/$@; }; f"
+
+	# my old aliases
+
+	aall = add . --all
+	#aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
+	amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+	export = archive -o latest.tar.gz -9 --prefix=latest/
+	last = cat-file commit HEAD
+	log-medium = log --graph --abbrev-commit --pretty=medium
+	log-oneline = log --graph --abbrev-commit --date=short --pretty=oneline
+	ls = ls-files --exclude-per-directory=.gitignore --exclude-from=.git/info/exclude -t -o -u -s -m -d
+	restore = !git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\"
+	this = !git init && git add . && git commit -m \"Initial commit.\"
+	unstage = reset HEAD --
+	up = pull --rebase --autostash
+
+# vim:ft=gitconfig

@@ -1,0 +1,47 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$all$time$jobs$character"
+
+[jobs]
+# symbol = ""
+format = "[\\[]($style)[$number]($style)[\\]]($style) "
+number_threshold = 1
+# symbol_threshold = 0
+style = "180"
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%T"
+style = "240"
+
+[cmd_duration]
+min_time = 500
+show_milliseconds = false
+style = "yellow bold dimmed"
+format = "[took](white dimmed) [$duration]($style) "
+
+[[battery.display]]
+threshold = 75
+style = "red bold"
+
+[username]
+style_user = "180"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[@](244)[$hostname](72)[:](252)"
+trim_at = "."
+disabled = false
+
+[directory]
+truncation_length = 4
+truncation_symbol = "…/"
+truncate_to_repo = false
+fish_style_pwd_dir_length = 0
+style = "111"

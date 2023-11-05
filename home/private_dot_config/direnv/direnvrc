@@ -1,0 +1,4 @@
+# vi:ft=bash
+# shellcheck shell=bash
+
+export DIRENV_LOG_FORMAT=

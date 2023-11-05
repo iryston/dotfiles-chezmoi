@@ -1,0 +1,116 @@
+# zmodload zsh/zprof # top of .zshrc file
+
+## (1) Locale ------------------------------------------------------------- {{{1
+
+export LANGUAGE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_COLLATE="C"
+export LC_NUMERIC="C"
+export LC_MEASUREMENT="ru_RU.UTF-8"
+export LC_MONETARY="ru_RU.UTF-8"
+export LC_PAPER="ru_RU.UTF-8"
+export LC_TIME="ru_RU.UTF-8"
+
+[[ -L /etc/localtime ]] && export TZ=:/etc/localtime
+
+## (2) XDG user directories ----------------------------------------------- {{{1
+
+[[ -z "$XDG_APPLICATION_DIR" ]] && export XDG_APPLICATION_DIR="${HOME}/Applications"
+[[ -z "$XDG_CACHE_HOME" ]] && export XDG_CACHE_HOME="${HOME}/.cache"
+[[ -z "$XDG_CONFIG_HOME" ]] && export XDG_CONFIG_HOME="${HOME}/.config"
+[[ -z "$XDG_DATA_HOME" ]] && export XDG_DATA_HOME="${HOME}/.local/share"
+[[ -z "$XDG_DESKTOP_DIR" ]] && export XDG_DESKTOP_DIR="${HOME}/Desktop"
+[[ -z "$XDG_DOCUMENTS_DIR" ]] && export XDG_DOCUMENTS_DIR="${HOME}/Documents"
+[[ -z "$XDG_DOWNLOAD_DIR" ]] && export XDG_DOWNLOAD_DIR="${HOME}/Downloads"
+[[ -z "$XDG_MUSIC_DIR" ]] && export XDG_MUSIC_DIR="${HOME}/Music"
+[[ -z "$XDG_PICTURES_DIR" ]] && export XDG_PICTURES_DIR="${HOME}/Pictures"
+[[ -z "$XDG_PUBLICSHARE_DIR" ]] && export XDG_PUBLICSHARE_DIR="${HOME}/Public"
+[[ -z "$XDG_STATE_HOME" ]] && export XDG_STATE_HOME="${HOME}/.local/state"
+[[ -z "$XDG_TEMPLATES_DIR" ]] && export XDG_TEMPLATES_DIR="${HOME}/Templates"
+[[ -z "$XDG_VIDEOS_DIR" ]] && export XDG_VIDEOS_DIR="${HOME}/Videos"
+
+## (6) ZSH-specific environment variables --------------------------------- {{{1
+
+## Enable extended globbing
+setopt extendedglob
+
+## Allow [ or ] whereever you want
+unsetopt nomatch
+
+## Makes color constants available
+autoload -U colors
+colors
+
+export SHELL_NAME="zsh"
+export SHELL_VERSION="${ZSH_VERSION}"
+
+## (8) Other variables ---------------------------------------------------- {{{1
+
+# Directory Stack
+DIRSTACKSIZE=16
+## Awesome cd movements from zshkit
+setopt autocd autopushd pushdminus pushdsilent pushdtohome pushdignoredups cdablevars
+alias cdd='dirs -v; echo -n "select number: "; read newdir; cd -"$newdir"'
+
+# Path -------------------------------------------------------------------- {{{1
+
+## Extend PATH
+## ensure dotfiles bin directory is loaded first
+PATH="${HOME}/.bin:$PATH"
+PATH="${HOME}/.local/bin:$PATH"
+PATH="${HOME}/bin:$PATH"
+#path=(~/bin $path)
+## mkdir .git/safe in the root of repositories you trust
+PATH=".git/safe/../../bin:$PATH"
+
+## External sources  ------------------------------------------------------ {{{1
+
+# source "${XDG_CONFIG_HOME}/profile.d/locale.sh"
+# source "${XDG_CONFIG_HOME}/profile.d/xdg.sh"
+source "${XDG_CONFIG_HOME}/profile.d/env.sh"
+source "${XDG_CONFIG_HOME}/profile.d/telemetry.sh"
+source "${XDG_CONFIG_HOME}/profile.d/direnv.sh"
+source "${XDG_CONFIG_HOME}/profile.d/rtx.sh"
+#source "${XDG_CONFIG_HOME}/profile.d/asdf.sh"
+source "${XDG_CONFIG_HOME}/profile.d/pagers.sh"
+source "${XDG_CONFIG_HOME}/profile.d/editors.sh"
+
+source "${ZDOTDIR}/zshrc.d/fzf.zsh"
+setopt sharehistory
+source "${ZDOTDIR}/zshrc.d/history.zsh"
+source "${ZDOTDIR}/zshrc.d/completion.zsh"
+source "${ZDOTDIR}/zshrc.d/keybindings.zsh"
+source "${ZDOTDIR}/zshrc.d/plugins.zsh"
+
+source "${XDG_CONFIG_HOME}/profile.d/functions.sh"
+source "${XDG_CONFIG_HOME}/profile.d/aliases.sh"
+source "${XDG_CONFIG_HOME}/profile.d/golang.sh"
+source "${XDG_CONFIG_HOME}/profile.d/python.sh"
+source "${XDG_CONFIG_HOME}/profile.d/zoxide.sh"
+source "${XDG_CONFIG_HOME}/profile.d/nnn.sh"
+
+## Local config
+[[ -f "${HOME}/.zshrc.local" ]] && source "${HOME}/.zshrc.local"
+
+# Automatically remove duplicates from these arrays
+typeset -U path cdpath fpath manpath
+
+export -U PATH
+
+## Prompt
+# setopt PROMPT_SUBST
+# show_virtual_env() {
+#   if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+#     echo "($(basename $VIRTUAL_ENV))"
+#   fi
+# }
+# PS1='$(show_virtual_env)'$PS1
+
+if [[ -f "/opt/gitstatus/gitstatus.prompt.zsh" ]]; then
+  source "${ZDOTDIR}/zshrc.d/gitstatus.prompt.zsh"
+elif command -v "starship" >/dev/null 2>&1; then
+  [[ -n "$ZSH_VERSION" ]] && eval "$(starship init zsh)"
+fi
+
+# zprof # bottom of .zshrc

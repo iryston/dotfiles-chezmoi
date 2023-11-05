@@ -106,7 +106,6 @@ $RECYCLE.BIN/
 # VisualStudioCode
 .vscode
 
-
 # (3) Tags -------------------------------------------------------------- {{{1
 
 TAGS
@@ -132,6 +131,8 @@ cscope.po.out
 *.log
 *.orig
 *.swp
+# Kate and Kwrite swap
+*.kate-swp
 
 # Ansible
 *.retry

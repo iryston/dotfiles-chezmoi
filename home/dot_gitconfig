@@ -1,0 +1,81 @@
+# vim:ft=gitconfig
+# git/config
+
+[core]
+	excludesfile = ~/.gitconfig.d/gitignore_global
+	editor = vim
+	autocrlf = input
+	pager = less --tabs=4 -imwFRX
+
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+
+[init]
+	tempaltedir = ~/.gitconfig.d/template
+	defaultBranch = main
+
+[push]
+	default = current
+	# gpgSign = true
+
+[icdiff]
+	options = --line-numbers --tabsize=4 --numlines=8
+
+[pretty]
+	nice = "format:%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset %Cblue%G?%Creset"
+
+[include]
+	path = ~/.gitconfig.d/aliases
+	path = ~/.gitconfig.local
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[mergetool "vimdiff"]
+	cmd = vim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+	prompt = false
+	keepBackup = false
+
+[commit]
+	template = ~/.gitconfig.d/commitmsg
+	gpgSign = true
+
+[tag]
+	gpgSign = true
+
+[pager]
+	status = true
+	show-branch = true
+	color = true
+
+[gui]
+	encoding = utf-8
+
+[url "https://bitbucket.org/"]
+	insteadOf = bb:
+
+[url "https://gitlab.com/"]
+	insteadOf = gl:
+
+[url "https://github.com/"]
+	insteadOf = gh:
+
+[url "https://gist.github.com/"]
+	insteadOf = gist:
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

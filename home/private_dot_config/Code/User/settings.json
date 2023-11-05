@@ -1,0 +1,278 @@
+{
+  "breadcrumbs.enabled": true,
+  "cSpell.enabled": true,
+  "cSpell.language": "en,ru",
+  "cSpell.userWords": ["ansible", "metafile", "outdir", "tailwindcss"],
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.idSelector": "error",
+  "css.lint.zeroUnits": "error",
+  "css.validate": false,
+  "dart.allowAnalytics": false,
+  "dart.analysisServerFolding": false,
+  "dart.analyzeAngularTemplates": false,
+  "dart.flutterHotReloadOnSave": "never",
+  "diffEditor.renderSideBySide": true,
+  "editor.autoIndent": "none",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorWidth": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.dragAndDrop": false,
+  "editor.fontFamily": "'SFMono Nerd Font Mono',SFMono-Regular,'SF Mono','JetBrainsMonoNL Nerd Font Mono','Liberation Mono', 'FiraCode Nerd Font Mono', 'MesloLGS NF', 'IosevkaTerm Nerd Font Mono', 'Hack Nerd Font Mono', 'JetBrains Mono', 'Fira Code Retina', 'Fira Code', 'Iosevka Term', 'Roboto Mono', 'Input Mono', Hack, 'Droid Sans Mono', 'Fantasque Sans Mono', 'Anonymous Pro', Menlo, Monaco, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.insertSpaces": false,
+  "editor.lightbulb.enabled": false,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.occurrencesHighlight": false,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "other": true,
+    "strings": true
+  },
+  "editor.quickSuggestionsDelay": 100,
+  "editor.renderControlCharacters": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120, 200],
+  "editor.selectionHighlight": true,
+  "editor.smoothScrolling": true,
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "postcss": "css",
+    "twig": "twig",
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.probe": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+  "extensions.autoCheckUpdates": false,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "Vagrantfile": "ruby",
+    ".env*": "dotenv",
+    "**/mysql/**/*.cnf": "ini",
+    "*.install": "php",
+    "*.module": "php",
+    "*.profile": "php",
+    "*.theme": "php",
+    "*.inc": "php"
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.DS_Store": true
+  },
+  "files.hotExit": "off",
+  "githubPullRequests.telemetry.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false
+  },
+  "gitlens.advanced.telemetry.enabled": false,
+  "gitlens.blame.avatars": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.detailsMarkdownFormat": "[__${author}__](mailto:${email}), ${ago} &nbsp; _(${date})_ ${message}\n\n${commands}",
+  "gitlens.keymap": "none",
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.views.branches.avatars": false,
+  "gitlens.views.commits.avatars": false,
+  "gitlens.views.contributors.avatars": false,
+  "gitlens.views.fileHistory.avatars": false,
+  "gitlens.views.lineHistory.avatars": false,
+  "gitlens.views.remotes.avatars": false,
+  "gitlens.views.repositories.avatars": false,
+  "gitlens.views.searchAndCompare.avatars": false,
+  "gitlens.views.tags.avatars": false,
+  "go.toolsManagement.autoUpdate": true,
+  "go.useLanguageServer": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.maxPreserveNewLines": 1,
+  "html.format.wrapLineLength": 0,
+  "indentRainbow.indicatorStyle": "light",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "json.maxItemsComputed": 10000,
+  "less.lint.duplicateProperties": "warning",
+  "less.lint.idSelector": "error",
+  "less.lint.zeroUnits": "error",
+  "less.validate": false,
+  "Lua.telemetry.enable": false,
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "notebook.outputLineHeight": 20,
+  "partialDiff.enableTelemetry": false,
+  "python.languageServer": "Default",
+  "redhat.telemetry.enabled": false,
+  "scss.lint.duplicateProperties": "warning",
+  "scss.lint.idSelector": "error",
+  "scss.lint.zeroUnits": "error",
+  "scss.validate": false,
+  "search.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/bower_components": true,
+    "**/CVS": true,
+    "**/node_modules": true,
+    "**/__pycache__": true
+  },
+  "search.smartCase": true,
+  "search.useIgnoreFiles": true,
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.emptyWindow": false,
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "shellcheck.ignorePatterns": {
+    "**/*.local": true
+  },
+  "stylelint.enable": true,
+  "svelte.enable-ts-plugin": true,
+  "telemetry.telemetryLevel": "off",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorBlinking": true,
+  "textmarker.enableTelemetry": false,
+  "todo-tree.general.tags": [
+    "BUG",
+    "FIXME",
+    "HACK",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "window.autoDetectColorScheme": true,
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#b58800",
+    "tab.unfocusedActiveBorder": "#b58800",
+    "[Default Dark+]": {
+      "statusBar.background": "#333333",
+      "statusBar.foreground": "#cccccc"
+    },
+    "[Default Light+]": {
+      "statusBar.background": "#333333",
+      "statusBar.foreground": "#cccccc"
+    }
+  },
+  "workbench.editor.untitled.labelFormat": "name",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.enableExperiments": false,
+  "workbench.fontAliasing": "auto",
+  "workbench.preferredDarkColorTheme": "Bluloco Dark",
+  "workbench.preferredLightColorTheme": "Bluloco Light",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.settings.useSplitJSON": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "zenMode.centerLayout": true,
+  "zenMode.fullScreen": true,
+  "zenMode.hideLineNumbers": false,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[go.mod]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 200
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "raynigon.nginx-formatter"
+  },
+  "[plaintext]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "other": "off",
+      "strings": "off"
+    }
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": false
+  },
+  "[twig]": {
+    "editor.formatOnSave": false
+  },
+  "workbench.colorTheme": "Bluloco Dark",
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.accessibilitySupport": "off",
+  "gitlens.telemetry.enabled": false,
+  "rest-client.enableTelemetry": false,
+  "code-runner.enableAppInsights": false,
+  "editor.lineHeight": 1.6,
+  "shellformat.path": "/usr/local/bin/shfmt",
+  "window.restoreWindows": "none",
+  "files.restoreUndoStack": false,
+  "PT Application Inspector settings.Allow telemetry collection": false,
+  "dotenv.enableAutocloaking": false,
+  "terminal.integrated.env.linux": {
+    "GTK_PATH": null,
+  },
+  "editor.fontSize": 16,
+  "extensions.autoUpdate": false,
+  "svg.preview.mode": "svg",
+  "workbench.editor.empty.hint": "hidden",
+  "window.zoomLevel": 1.5,
+  "window.density.editorTabHeight": "compact",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "workbench.settings.applyToAllProfiles": [
+    "editor.bracketPairColorization.enabled",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType"
+  ]
+}

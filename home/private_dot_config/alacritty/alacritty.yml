@@ -1,0 +1,80 @@
+live_config_reload: true
+
+# shell:
+  # program: /usr/local/bin/zsh
+  # args:
+    # - --login
+    # - 'tmux new-session -A -s "$(hostname -s)"'
+
+env:
+  TERM: "xterm-256color"
+
+window:
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  decorations: full
+  padding:
+    x: 10
+    y: 10
+
+  startup_mode: Maximized
+
+scrolling:
+  history: 10000
+
+mouse:
+  hide_when_typing: true
+  selection:
+    save_to_clipboard: true
+
+font:
+  size: 18.0
+  normal:
+    family: JetBrainsMonoNL Nerd Font Mono
+
+  scale_with_dpi: true
+
+  offset:
+   x: 0
+   y: 0
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Block
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: Always
+  blink_timeout: 20
+
+
+key_bindings:
+  - { key: N,             mods: Control|Shift,                    action: SpawnNewInstance }
+  - { key: Q,             mods: Control,                          action: Quit             }
+  - { key: Numpad0,       mods: Control,                          action: ResetFontSize    }
+  - { key: J,             mods: Alt,                              chars: "\x1bj"           }
+  - { key: K,             mods: Alt,                              chars: "\x1bk"           }
+  - { key: H,             mods: Alt,                              chars: "\x1bh"           }
+  - { key: L,             mods: Alt,                              chars: "\x1bl"           }
+
+# import:
+## Color themes
+ # - ~/.config/alacritty/themes/google.yml
+ # - ~/.config/alacritty/themes/nord.yml
+ # - ~/.config/alacritty/themes/lighthaus.yml
+ # - ~/.config/alacritty/themes/tokyonight.yml

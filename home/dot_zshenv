@@ -1,0 +1,14 @@
+# Skip global compinit
+unsetopt GLOBAL_RCS
+skip_global_compinit=1
+setopt noglobalrcs
+
+# Disable Terminal.app sessons on MacOS
+export SHELL_SESSIONS_DISABLE=1
+
+[[ -z "$XDG_CONFIG_HOME" ]] && export XDG_CONFIG_HOME="${HOME}/.config"
+
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+source -- "${ZDOTDIR}/.zshenv"
+
+[[ -z "$DOTFILES_DIR" ]] && export DOTFILES_DIR="${HOME}/.dotfiles"

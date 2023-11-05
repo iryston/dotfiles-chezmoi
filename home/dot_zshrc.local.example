@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+
+## Custom variables ------------------------------------------------------- {{{1
+
+## Define PROJECTS directory (used in function 'p')
+local PROJECTS_DIR="${HOME}/PROJECTS"
+[[ -d "${PROJECTS_DIR}" ]] && export PROJECTS_DIR="${PROJECTS_DIR}" || unset PROJECTS_DIR
+
+#alias astro='nvim -u ~/.config/astronvim/entry.lua'
+alias nvim-astro='NVIM_APPNAME=nvim-astronvim nvim'
+alias nvim-lazyvim='NVIM_APPNAME=nvim-lazyvim nvim'
+alias nvim-nvchad='NVIM_APPNAME=nvim-nvchad nvim'
+
+alias nvim-010='${HOME}/Applications/nvim.appimage'
+
+export OPENAI_API_KEY=""
+
+path=("${HOME}/.local/share/JetBrains/Toolbox/scripts" $path)
