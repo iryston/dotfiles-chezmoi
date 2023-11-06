@@ -11,7 +11,9 @@
 	; token =
 
 [credential]
-	helper = cache --timeout=3600
+	credentialStore = cache
+	cacheOptions = --timeout 43200
+	helper = cache --timeout=43200
 
 [gpg]
 	program = gpg
