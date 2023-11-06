@@ -1,24 +1,24 @@
-[" .local/share/zsh/fzf-tab"]
+[".local/share/zsh/fzf-tab"]
     type = "git-repo"
     url = "https://github.com/Aloxaf/fzf-tab.git/"
     refreshPeriod = "336h"
 
-[" .local/share/zsh/fzf-tab-source"]
+[".local/share/zsh/fzf-tab-source"]
     type = "git-repo"
     url = "https://github.com/Freed-Wu/fzf-tab-source.git/"
     refreshPeriod = "336h"
 
-[" .local/share/zsh/fast-syntax-highlighting"]
+[".local/share/zsh/fast-syntax-highlighting"]
     type = "git-repo"
     url = "https://github.com/zdharma-continuum/fast-syntax-highlighting.git/"
     refreshPeriod = "336h"
 
-[" .local/share/zsh/zsh-autosuggestions"]
+[".local/share/zsh/zsh-autosuggestions"]
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-autosuggestions.git/"
     refreshPeriod = "336h"
 
-[" .local/share/zsh/zsh-history-substring-search"]
+[".local/share/zsh/zsh-history-substring-search"]
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-history-substring-search.git/"
     refreshPeriod = "336h"
