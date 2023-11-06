@@ -9,6 +9,6 @@ _symlinks/**
 .chezmoiscripts/darwin/**
 {{ end }}
 
-{{ if ne .chezmoi.os "darwin" "linux" }}
+{{ if or (ne .chezmoi.os "darwin") (ne .chezmoi.os "linux") }}
 .hushlogin
 {{ end }}
