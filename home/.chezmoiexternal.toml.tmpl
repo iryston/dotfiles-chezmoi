@@ -31,6 +31,12 @@
 [".local/bin/rtx"]
     type = "file"
     url = "https://rtx.pub/{{ $rtx_bin }}"
-    refreshPeriod = "672h"
     executable = true
 {{-   end }}
+
+{{ if eq .chezmoi.os "linux" }}
+[".local/bin/nvim"]
+    type = "file"
+    url = "https://github.com/neovim/neovim/releases/download/stable/nvim.appimage"
+    refreshPeriod = "336h"
+    executable = true
