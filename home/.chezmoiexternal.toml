@@ -22,3 +22,9 @@
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-history-substring-search.git/"
     refreshPeriod = "336h"
+
+["$XDG_APPLICATION_DIR/nvim"]
+    type = "file"
+    url = "https://github.com/neovim/neovim/releases/download/stable/nvim.appimage"
+    refreshPeriod = "672h"
+    executable = true
