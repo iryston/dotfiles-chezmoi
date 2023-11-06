@@ -11,21 +11,37 @@
     type = "git-repo"
     url = "https://github.com/Freed-Wu/fzf-tab-source.git/"
     refreshPeriod = "336h"
+    [".local/share/zsh/fzf-tab-source".clone]
+      args = ["--depth=1"]
+    [".local/share/zsh/fzf-tab-source".pull]
+      args = ["--ff-only", "--depth=1"]
 
 [".local/share/zsh/fast-syntax-highlighting"]
     type = "git-repo"
     url = "https://github.com/zdharma-continuum/fast-syntax-highlighting.git/"
     refreshPeriod = "336h"
+    [".local/share/zsh/fast-syntax-highlighting".clone]
+      args = ["--depth=1"]
+    [".local/share/zsh/fast-syntax-highlighting".pull]
+      args = ["--ff-only", "--depth=1"]
 
 [".local/share/zsh/zsh-autosuggestions"]
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-autosuggestions.git/"
     refreshPeriod = "336h"
+    [".local/share/zsh/zsh-autosuggestions".clone]
+      args = ["--depth=1"]
+    [".local/share/zsh/zsh-autosuggestions".pull]
+      args = ["--ff-only", "--depth=1"]
 
 [".local/share/zsh/zsh-history-substring-search"]
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-history-substring-search.git/"
     refreshPeriod = "336h"
+    [".local/share/zsh/zsh-history-substring-search".clone]
+      args = ["--depth=1"]
+    [".local/share/zsh/zsh-history-substring-search".pull]
+      args = ["--ff-only", "--depth=1"]
 
 {{-   $rtx_bin := "" }}
 {{-   if eq .chezmoi.os "darwin" }}
