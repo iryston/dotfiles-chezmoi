@@ -23,8 +23,13 @@
     url = "https://github.com/zsh-users/zsh-history-substring-search.git/"
     refreshPeriod = "336h"
 
-["{{ env "XDG_APPLICATION_DIR" }}/"]
+{{-   if eq .chezmoi.os "darwin" }}
+{{-     $rtx_bin = "rtx-latest-macos-x64" }}
+{{-   else if eq .chezmoi.os "linux" }}
+{{-     $rtx_bin = "rtx-latest-linux-x64" }}
+[".local/bin/rtx"]
     type = "file"
-    url = "https://github.com/neovim/neovim/releases/download/stable/nvim.appimage"
+    url = "https://rtx.pub/{{ $rtx_bin }}"
     refreshPeriod = "672h"
     executable = true
+{{-   end }}
