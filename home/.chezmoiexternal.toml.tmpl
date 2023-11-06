@@ -1,3 +1,10 @@
+{{- $home_dir_prefix := (expandenv "$HOME/") }}
+{{- $app_dir_env := env "XDG_APPLICATION_DIR" }}
+{{- $app_dir := "Applications" }}
+{{- if hasPrefix $home_dir_prefix $app_dir_env }}
+{{-   $app_dir := trimPrefix $home_dir_prefix $app_dir_env }}
+{{- end }}
+
 [".local/share/zsh/fzf-tab"]
     type = "git-repo"
     url = "https://github.com/Aloxaf/fzf-tab.git/"
@@ -23,7 +30,7 @@
     url = "https://github.com/zsh-users/zsh-history-substring-search.git/"
     refreshPeriod = "336h"
 
-["{{ env "XDG_APPLICATION_DIR" }}/nvim"]
+["{{ $app_dir }}/nvim"]
     type = "file"
     url = "https://github.com/neovim/neovim/releases/download/stable/nvim.appimage"
     refreshPeriod = "672h"
