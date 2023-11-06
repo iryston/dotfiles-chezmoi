@@ -3,7 +3,12 @@ _symlinks/**
 
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
+{{ end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/darwin/**
+{{ end }}
+
+{{ if ne .chezmoi.os "darwin" "linux" }}
 .hushlogin
-.local/bin/nvim
-.local/share/fonts
 {{ end }}
