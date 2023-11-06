@@ -2,13 +2,10 @@
     type = "git-repo"
     url = "https://github.com/Aloxaf/fzf-tab.git/"
     refreshPeriod = "336h"
-    clone:
-      args:
-        - --depth 1
-    pull:
-      args:
-        - --depth 1
-        - --ff-only
+    [".local/share/zsh/fzf-tab".clone]
+      args = ["--depth=1"]
+    [".local/share/zsh/fzf-tab".pull]
+      args = ["--ff-only", "--depth=1"]
 
 [".local/share/zsh/fzf-tab-source"]
     type = "git-repo"
