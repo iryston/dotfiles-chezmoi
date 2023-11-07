@@ -19,7 +19,13 @@
 {{-   $ephemeral = true -}}
 {{- end -}}
 
+{{- $email := get . "email" -}}
+{{- if not $email -}}
+{{-   $email = promptString "email" -}}
+{{- end -}}
+
 [data]
+    email = {{ $email | quote  }}
     docker = {{ $docker }}
     ephemeral = {{ $ephemeral }}
     headless = {{ $headless }}

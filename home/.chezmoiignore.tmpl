@@ -1,20 +1,27 @@
 _symlinks
 _symlinks/**
 
-{{ if ne .chezmoi.os "linux" }}
+{{ if and (ne .chezmoi.os "darwin") (ne .chezmoi.os "linux") -}}
+.hushlogin
+{{- end }}
+
+{{ if ne .chezmoi.os "darwin" -}}
+.chezmoiscripts/darwin/**
+Library
+Library/**
+{{- end }}
+
+{{ if ne .chezmoi.os "linux" -}}
 .chezmoiscripts/linux/**
 .config/Code
 .config/Code/**
 .config/VSCodium
 .config/VSCodium/**
-{{ end }}
+{{- end }}
 
-{{ if ne .chezmoi.os "darwin" }}
-.chezmoiscripts/darwin/**
-Library
-Library/**
-{{ end }}
-
-{{ if and (ne .chezmoi.os "darwin") (ne .chezmoi.os "linux") }}
-.hushlogin
-{{ end }}
+{{ if ne .chezmoi.os "windows" -}}
+AppData/**
+Documents/*PowerShell/**
+{{- else -}}
+.config/powershell/**
+{{- end }}
