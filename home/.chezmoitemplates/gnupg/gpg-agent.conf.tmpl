@@ -1,0 +1,17 @@
+{{ if eq .chezmoi.os "darwin" }}
+  {{ if eq .chezmoi.arch "arm64" -}}
+pinentry-program /opt/homebrew/bin/pinentry-mac
+  {{ else if eq .chezmoi.arch "amd64" -}}
+pinentry-program /usr/local/bin/pinentry-mac
+  {{ end -}}
+{{ else if eq .chezmoi.os "linux" }}
+pinentry-program /usr/bin/pinentry-qt
+{{ end }}
+
+pinentry-timeout 120
+enable-ssh-support
+
+default-cache-ttl 43200
+max-cache-ttl 43200
+default-cache-ttl-ssh 43200
+max-cache-ttl-ssh 43200
