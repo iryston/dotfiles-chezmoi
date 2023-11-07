@@ -3,10 +3,16 @@ _symlinks/**
 
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
+.config/Code
+.config/Code/**
+.config/VSCodium
+.config/VSCodium/**
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/darwin/**
+Library
+Library/**
 {{ end }}
 
 {{ if and (ne .chezmoi.os "darwin") (ne .chezmoi.os "linux") }}
