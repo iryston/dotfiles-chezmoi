@@ -1,28 +1,4 @@
 ## Plugins ---------------------------------------------------------------- {{{1
-if command -v "fzf" >/dev/null 2>&1; then
-  ## fzf-tab
-  ## https://github.com/Aloxaf/fzf-tab.git
-  if [[ -f "${XDG_DATA_HOME}/zsh/fzf-tab/fzf-tab.plugin.zsh" ]]; then
-    source "${XDG_DATA_HOME}/zsh/fzf-tab/fzf-tab.plugin.zsh"
-    zstyle ':fzf-tab:complete:cd:*' fzf-preview \
-      'eza -aT -L 1 --color=always $realpath || tree -aC -L 1 $realpath || ls -1Av $realpath'
-    zstyle ":fzf-tab:*" fzf-flags --color=bg+:237
-    zstyle ':fzf-tab:*' fzf-pad 4
-    zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
-  fi
-
-  ## fzf-tab-source
-  ## https://github.com/Freed-Wu/fzf-tab-source.git
-  if command -v "lesspipe" >/dev/null 2>&1; then
-    if [[ -f "${XDG_DATA_HOME}/zsh/fzf-tab-source/fzf-tab-source.plugin.zsh" ]]; then
-      source "${XDG_DATA_HOME}/zsh/fzf-tab-source/fzf-tab-source.plugin.zsh"
-    fi
-  fi
-  # Use tmux popup if available.
-  if [ -n "$TMUX" ] && [ "$TMUX_SUPPORT_POPUP" = 1 ]; then
-    zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-  fi
-fi
 
 ## fast-syntax-highlighting
 ## https://github.com/zdharma-continuum/fast-syntax-highlighting.git

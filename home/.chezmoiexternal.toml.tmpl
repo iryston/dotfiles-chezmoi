@@ -43,6 +43,15 @@
     [".local/share/zsh/zsh-history-substring-search".pull]
       args = ["--ff-only", "--depth=1"]
 
+[".local/share/bash/fzf-tab-completion"]
+    type = "git-repo"
+    url = "https://github.com/lincheney/fzf-tab-completion.git/"
+    refreshPeriod = "336h"
+    [".local/share/bash/fzf-tab-completion".clone]
+      args = ["--depth=1"]
+    [".local/share/bash/fzf-tab-completion".pull]
+      args = ["--ff-only", "--depth=1"]
+
 {{-   $rtx_bin := "" }}
 {{-   if eq .chezmoi.os "darwin" }}
 {{-     $rtx_bin = "rtx-latest-macos-x64" }}

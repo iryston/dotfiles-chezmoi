@@ -1,11 +1,6 @@
 #!/usr/bin/env zsh
 
-# Better completion for ssh in Zsh.
-# https://github.com/sunlei/zsh-ssh
-# v0.0.3
-# Copyright (c) 2020 Sunlei <guizaicn@gmail.com>
-
-# source ./zsh-ssh.zsh
+# Completion for ssh in Zsh.
 
 _ssh-host-list() {
   local ssh_config host_list

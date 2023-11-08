@@ -1,9 +1,9 @@
 # shellcheck source=/dev/null shell=bash disable=SC2039,2086,2116,SC2166,2206
 
-export PATH="${XDG_DATA_HOME:-$HOME/.local/share}/rtx/shims:$PATH"
-
 [[ -n "$BASH_VERSION" ]] && eval "$(rtx activate bash)"
 [[ -n "$ZSH_VERSION" ]]  && eval "$(rtx activate zsh)"
+
+export PATH="${XDG_DATA_HOME:-$HOME/.local/share}/rtx/shims:$PATH"
 
 export RTX_GO_DEFAULT_PACKAGES_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/rtx/default-go-packages"
 export RTX_NODE_DEFAULT_PACKAGES_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/rtx/default-npm-packages"
