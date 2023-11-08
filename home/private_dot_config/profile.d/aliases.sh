@@ -96,6 +96,9 @@ for cmd in "gitui" "lazygit" "tig"; do
   fi
 done
 
+alias yt='yt-dlp --windows-filenames --compat-options filename-sanitization --trim-filenames 120 --continue --format "bv*[ext=mp4][height<=?720][fps<=?30]+ba[ext=m4a]/b[ext=mp4]"'
+alias yt-stream='yt-dlp --windows-filenames --compat-options filename-sanitization --trim-filenames 120 --downloader ffmpeg --hls-use-mpegts'
+
 # Pretty print the path
 alias ppp='echo $PATH | tr -s ":" "\n"'
 

@@ -1,0 +1,16 @@
+@fsouza/prettierd
+@tailwindcss/language-server
+bash-language-server
+emmet-ls
+eslint
+eslint_d
+gulp-cli
+intelephense
+neovim
+npm
+npm-check-updates
+stylelint
+tree-sitter-cli
+typescript
+vscode-langservers-extracted
+yarn
